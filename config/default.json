@@ -8,7 +8,7 @@
 	},
 	"twitch": {
 		"webhooks": {
-			"renewAfter": {
+			"lifetime": {
 				"amount": 9,
 				"unit": "days"
 			}
