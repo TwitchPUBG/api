@@ -19,6 +19,11 @@ const consentOptions = [{
 		description: "keep a history of created sessions, rounds and the users who participated in these rounds",
 		since: "2018-04-15",
 		deprecated: false
+	}, {
+		key: "webPromotion",
+		description: "show your Twitch username and channel on our website as 'people who use our product'",
+		since: "2018-04-15",
+		deprecated: false
 	}
 ];
 
