@@ -3,6 +3,16 @@ const router = new Router();
 const passport = require("koa-passport");
 const Webhook = require("../core/db").model("webhook");
 
+router.get("/:userId", async (ctx, next) => {
+	console.log(ctx.req.headers);
+	console.log(ctx.req.body);
+	console.log(ctx.request.query);
+
+	ctx.body = ctx.request.query["hub.challenge"];
+
+	return next();
+});
+
 router.post("/:userId", async (ctx, next) => {
 	/*let webhook = await Webhook.findOne({
 		where: {
