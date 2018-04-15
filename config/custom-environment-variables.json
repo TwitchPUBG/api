@@ -1,0 +1,28 @@
+{
+	"environment": "NODE_ENV",
+	"web": {
+		"port": "PORT",
+		"logLevel": "WEB_LOG_LEVEL"
+	},
+	"twitch": {
+		"clientId": "TWITCH_ID",
+		"clientSecret": "TWITCH_SECRET",
+		"callbackUrl": "TWITCH_CALLBACK",
+		"username": "TWITCH_USERNAME"
+	},
+	"pg": {
+		"host": "PG_HOST",
+		"port": "PG_PORT",
+		"database": "PG_DATABASE",
+		"user": "PG_USER",
+		"password": "PG_PASSWORD"
+	},
+	"redis": {
+		"host": "REDIS_HOST",
+		"port": "REDIS_PORT",
+		"auth": "REDIS_AUTH"
+	},
+	"security": {
+		"keyPath": "SECURITY_KEYPATH"
+	}
+}

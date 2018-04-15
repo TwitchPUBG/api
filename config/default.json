@@ -1,0 +1,21 @@
+{
+	"web": {
+		"port": 3000
+	},
+	"pg": {
+		"host": "localhost",
+		"port": 5432
+	},
+	"twitch": {
+		"webhooks": {
+			"renewAfter": {
+				"amount": 9,
+				"unit": "days"
+			}
+		}
+	},
+	"security": {
+		"keyPath": "key.secret",
+		"keyBytes": 32
+	}
+}

@@ -1,0 +1,36 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Twitch PUBG REST API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "key:generate": "node cli/generate-key"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TwitchPUBG/api.git"
+  },
+  "author": "Ruben Rutten <ruben@rubenrutten.nl>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TwitchPUBG/api/issues"
+  },
+  "homepage": "https://github.com/TwitchPUBG/api#readme",
+  "dependencies": {
+    "@koa/cors": "2",
+    "config": "^1.30.0",
+    "dotenv": "^5.0.1",
+    "koa": "^2.5.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-passport": "^4.0.1",
+    "koa-router": "^7.4.0",
+    "kue": "^0.11.6",
+    "moment": "^2.22.1",
+    "passport-twitch": "github:Erveon/passport-twitch",
+    "pg": "^7.4.1",
+    "redis": "^2.8.0",
+    "sequelize": "^4.37.6",
+    "ws": "^5.1.1"
+  }
+}
