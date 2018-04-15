@@ -13,7 +13,7 @@ module.exports = {
         onDelete: "cascade",
         primaryKey: true
       },
-      option: {
+      key: {
         type: Sequelize.STRING,
         primaryKey: true
       },
@@ -24,15 +24,15 @@ module.exports = {
       }
     })
     .then(() => {
-      return queryInterface.addConstraint("consent", ["userId", "option"], {
+      return queryInterface.addConstraint("consent", ["userId", "key"], {
         type: "unique",
-        name: "consent_unique_userId_option"
+        name: "consent_unique_userId_key"
       });
     });
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.removeConstraint("consent", "consent_unique_userId_option")
+    return queryInterface.removeConstraint("consent", "consent_unique_userId_key")
     .then(() => {
       return queryInterface.dropTable("consent");
     });

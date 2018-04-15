@@ -40,7 +40,28 @@ module.exports = (sequelize, DataTypes) => {
 		});
 
 	User.associate = (models) => {
+		User.Consents = User.hasMany(models.consent);
+
+		User.addScope("response", {
+			attributes: [
+				"id",
+				"email",
+				"twitchId",
+				"twitchName",
+				"botActive",
+				"createdAt",
+				"updatedAt"
+			]
+		});
+	}
+
+	User.prototype.toJSON = function() {
+		let values = Object.assign({}, this.get());
+
+		delete values.accessToken;
+		delete values.refreshToken;
 		
+		return values;
 	}
 
 	return User;

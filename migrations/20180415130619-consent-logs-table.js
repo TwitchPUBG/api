@@ -13,7 +13,7 @@ module.exports = {
         onDelete: "cascade",
         primaryKey: true
       },
-      option: {
+      key: {
         type: Sequelize.STRING,
         primaryKey: true
       },
